@@ -52,8 +52,8 @@ cd pix2pixHD_Multi-task_Learning
 - Please download the pre-trained Cityscapes model from [here](https://drive.google.com/file/d/1h9SykUnuZul7J3Nbms2QGH1wa85nbN2-/view?usp=sharing) (google drive link), and put it under `./checkpoints/label2city_1024p/`
 - Test the model (`bash ./scripts/test_1024p.sh`):
 ```bash
-#!./scripts/test_1024p.sh
-python test.py --name label2city_1024p --netG local --ngf 32 --resize_or_crop none
+#!./scripts/test.sh
+python test.py --dataroot F:\xiongxiangyu\pix2pixHD_Mask_Data --name NC2C --label_nc 0 --input_nc 9 --output_nc 6 --resize_or_crop none --gpu_ids 0 --which_epoch 200 --no_instance --how_many 144
 ```
 The test results will be saved to a html file here: `./results/label2city_1024p/test_latest/index.html`.
 
@@ -68,8 +68,8 @@ After downloading, please put it under the `datasets` folder in the same way the
 ### Training
 - Train a model at 1024 x 512 resolution (`bash ./scripts/train_512p.sh`):
 ```bash
-#!./scripts/train_512p.sh
-python train.py --name label2city_512p
+#!./scripts/train.sh
+python train.py --dataroot F:\xiongxiangyu\pix2pixHD_Mask_Data --name NC2C --label_nc 0 --input_nc 9 --output_nc 6 --netG global --resize_or_crop none --gpu_ids 0 --batchSize 1 --no_instance
 ```
 - To view training results, please checkout intermediate results in `./checkpoints/label2city_512p/web/index.html`.
 If you have tensorflow installed, you can see tensorboard logs in `./checkpoints/label2city_512p/logs` by adding `--tf_log` to the training scripts.
