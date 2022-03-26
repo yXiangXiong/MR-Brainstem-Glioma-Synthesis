@@ -48,31 +48,23 @@ cd pix2pixHD_Multi-task_Learning
 
 
 ### Testing
-- A few example Cityscapes test images are included in the `datasets` folder.
-- Please download the pre-trained Cityscapes model from [here](https://drive.google.com/file/d/1h9SykUnuZul7J3Nbms2QGH1wa85nbN2-/view?usp=sharing) (google drive link), and put it under `./checkpoints/label2city_1024p/`
 - Test the model (`bash ./scripts/test_1024p.sh`):
 ```bash
 #!./scripts/test.sh
 python test.py --dataroot F:\xiongxiangyu\pix2pixHD_Mask_Data --name NC2C --label_nc 0 --input_nc 9 --output_nc 6 --resize_or_crop none --gpu_ids 0 --which_epoch 200 --no_instance --how_many 144
 ```
-The test results will be saved to a html file here: `./results/label2city_1024p/test_latest/index.html`.
+The test results will be saved to a html file here: `./results/NC2C/test_latest/index.html`.
 
 More example scripts can be found in the `scripts` directory.
 
-
-### Dataset
-- We use the Cityscapes dataset. To train a model on the full dataset, please download it from the [official website](https://www.cityscapes-dataset.com/) (registration required).
-After downloading, please put it under the `datasets` folder in the same way the example images are provided.
-
-
 ### Training
-- Train a model at 1024 x 512 resolution (`bash ./scripts/train_512p.sh`):
+- Train a model at 512 x 512 resolution (`bash ./scripts/train_512p.sh`):
 ```bash
 #!./scripts/train.sh
 python train.py --dataroot F:\xiongxiangyu\pix2pixHD_Mask_Data --name NC2C --label_nc 0 --input_nc 9 --output_nc 6 --netG global --resize_or_crop none --gpu_ids 0 --batchSize 1 --no_instance
 ```
-- To view training results, please checkout intermediate results in `./checkpoints/label2city_512p/web/index.html`.
-If you have tensorflow installed, you can see tensorboard logs in `./checkpoints/label2city_512p/logs` by adding `--tf_log` to the training scripts.
+- To view training results, please checkout intermediate results in `./checkpoints/NC2C/web/index.html`.
+If you have tensorflow installed, you can see tensorboard logs in `./checkpoints/NC2C/logs` by adding `--tf_log` to the training scripts.
 
 ### Multi-GPU training
 - Train a model using multiple GPUs (`bash ./scripts/train_512p_multigpu.sh`):
@@ -100,6 +92,18 @@ In our test case, it trains about 80% faster with AMP on a Volta machine.
 - If your input is not a label map, please just specify `--label_nc 0` which will directly use the RGB colors as input. The folders should then be named `train_A`, `train_B` instead of `train_label`, `train_img`, where the goal is to translate images from A to B.
 - If you don't have instance maps or don't want to use them, please specify `--no_instance`.
 - The default setting for preprocessing is `scale_width`, which will scale the width of all training images to `opt.loadSize` (1024) while keeping the aspect ratio. If you want a different setting, please change it by using the `--resize_or_crop` option. For example, `scale_width_and_crop` first resizes the image to have width `opt.loadSize` and then does random cropping of size `(opt.fineSize, opt.fineSize)`. `crop` skips the resizing step and only performs random cropping. If you don't want any preprocessing, please specify `none`, which will do nothing other than making sure the image is divisible by 32.
+- Path Structure
+- F:\xiongxiangyu\pix2pixHD_Mask_Data
+----trainT1
+----trainT2
+----trainASL
+----trainCplus # T1 contrast enhanced image
+----trainMask
+----testT1
+----testT2
+----testASL
+----testCplus # T1 contrast enhanced image
+----testMask
 
 ## More Training/Test Details
 - Flags: see `options/train_options.py` and `options/base_options.py` for all the training flags; see `options/test_options.py` and `options/base_options.py` for all the test flags.
@@ -110,14 +114,5 @@ In our test case, it trains about 80% faster with AMP on a Volta machine.
 
 If you find this useful for your research, please use the following.
 
-```
-@inproceedings{wang2018pix2pixHD,
-  title={High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs},
-  author={Ting-Chun Wang and Ming-Yu Liu and Jun-Yan Zhu and Andrew Tao and Jan Kautz and Bryan Catanzaro},  
-  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
-  year={2018}
-}
-```
-
 ## Acknowledgments
-This code borrows heavily from [pytorch-CycleGAN-and-pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix).
+This code borrows heavily from [pix2pixHD](https://github.com/NVIDIA/pix2pixHD).
