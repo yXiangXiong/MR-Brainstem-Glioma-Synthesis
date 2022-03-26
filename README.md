@@ -12,20 +12,20 @@ segmentation: application to brainstem glioma
 
 ## Image-to-image translation at 512x512 resolution
 
-- Label-to-face and interactive editing results
+- {T1, T2, ASL}-to-{T1ce, tumor mask}
 <p align='center'>
-  <img src='imgs/BSG001_T1_1012.png' width='250'/>
-  <img src='imgs/BSG001_T2_1012.png' width='250'/>
-  <img src='imgs/BSG001_ASL_1012.png' width='250'/>
-  <img src='imgs/BSG001_T1_1012_synthesized_image.png' width='250'/>
-  <img src='imgs/BSG001_T1_1012_synthesized_mask.png' width='250'/>
+  <img src='imgs/BSG001_T1_1012.png' width='150'/>
+  <img src='imgs/BSG001_T2_1012.png' width='150'/>
+  <img src='imgs/BSG001_ASL_1012.png' width='150'/>
+  <img src='imgs/BSG001_T1_1012_synthesized_image.jpg' width='150'/>
+  <img src='imgs/BSG001_T1_1012_synthesized_mask.jpg' width='150'/>
 </p>
 <p align='center'>
-  <img src='imgs/BSG043_T1_1007.png' width='250'/>
-  <img src='imgs/BSG043_T2_1007.png' width='250'/>
-  <img src='imgs/BSG043_ASL_1007.png' width='250'/>
-  <img src='imgs/BSG043_T1_1007_synthesized_image.png' width='250'/>
-  <img src='imgs/BSG043_T1_1007_synthesized_mask.png' width='250'/>
+  <img src='imgs/BSG043_T1_1007.png' width='150'/>
+  <img src='imgs/BSG043_T2_1007.png' width='150'/>
+  <img src='imgs/BSG043_ASL_1007.png' width='150'/>
+  <img src='imgs/BSG043_T1_1007_synthesized_image.jpg' width='150'/>
+  <img src='imgs/BSG043_T1_1007_synthesized_mask.jpg' width='150'/>
 </p>
 
 ## Prerequisites
@@ -42,8 +42,8 @@ pip install dominate
 ```
 - Clone this repo:
 ```bash
-git clone https://github.com/NVIDIA/pix2pixHD
-cd pix2pixHD
+git clone https://github.com/yXiangXiong/pix2pixHD_Multi-task_Learning
+cd pix2pixHD_Multi-task_Learning
 ```
 
 
