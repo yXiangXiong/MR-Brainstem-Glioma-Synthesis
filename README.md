@@ -11,48 +11,26 @@ segmentation: application to brainstem glioma
 <sup>1</sup>MR Clinical Science, Philips Healthcare, Suzhou, China, <sup>2</sup> Department of Radiology, Beijing Tiantan Hospital, Capital Medical University, Beijing, China
 
 ## Image-to-image translation at 512x512 resolution
-- Our label-to-streetview results
-<p align='center'>  
-  <img src='imgs/teaser_label.png' width='400'/>
-  <img src='imgs/teaser_ours.jpg' width='400'/>
-  <img src='imgs/teaser_ours.jpg' width='400'/>
-</p>
-- Interactive editing results
-<p align='center'>  
-  <img src='imgs/teaser_style.gif' width='400'/>
-  <img src='imgs/teaser_label.gif' width='400'/>
-</p>
-- Additional streetview results
-<p align='center'>
-  <img src='imgs/cityscapes_1.jpg' width='400'/>
-  <img src='imgs/cityscapes_2.jpg' width='400'/>
-</p>
-<p align='center'>
-  <img src='imgs/cityscapes_3.jpg' width='400'/>
-  <img src='imgs/cityscapes_4.jpg' width='400'/>
-</p>
 
 - Label-to-face and interactive editing results
 <p align='center'>
-  <img src='imgs/face1_1.jpg' width='250'/>
-  <img src='imgs/face1_2.jpg' width='250'/>
-  <img src='imgs/face1_3.jpg' width='250'/>
+  <img src='imgs/BSG001_T1_1012.png' width='250'/>
+  <img src='imgs/BSG001_T2_1012.png' width='250'/>
+  <img src='imgs/BSG001_ASL_1012.png' width='250'/>
+  <img src='imgs/BSG001_T1_1012_synthesized_image.png' width='250'/>
+  <img src='imgs/BSG001_T1_1012_synthesized_mask.png' width='250'/>
 </p>
 <p align='center'>
-  <img src='imgs/face2_1.jpg' width='250'/>
-  <img src='imgs/face2_2.jpg' width='250'/>
-  <img src='imgs/face2_3.jpg' width='250'/>
-</p>
-
-- Our editing interface
-<p align='center'>
-  <img src='imgs/city_short.gif' width='330'/>
-  <img src='imgs/face_short.gif' width='450'/>
+  <img src='imgs/BSG043_T1_1007.png' width='250'/>
+  <img src='imgs/BSG043_T2_1007.png' width='250'/>
+  <img src='imgs/BSG043_ASL_1007.png' width='250'/>
+  <img src='imgs/BSG043_T1_1007_synthesized_image.png' width='250'/>
+  <img src='imgs/BSG043_T1_1007_synthesized_mask.png' width='250'/>
 </p>
 
 ## Prerequisites
-- Linux or macOS
-- Python 2 or 3
+- Linux or Windows
+- Python 3
 - NVIDIA GPU (11G memory or larger) + CUDA cuDNN
 
 ## Getting Started
