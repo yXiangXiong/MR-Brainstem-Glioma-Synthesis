@@ -3,11 +3,10 @@ To reduce the exposure of Gadolinium-based Contrast Agents (GBCAs) in brainstem 
 we propose a novel multi-task generative network for contrast-enhanced T1-weight MR synthesis on brainstem glioma images. The proposed network
 can simultaneously synthesize the high-resolution contrast-enhanced image and the segmentation mask of brainstem glioma lesions. <br><br>
 [High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs](https://tcwang0509.github.io/pix2pixHD/)  
- [Ting-Chun Wang](https://tcwang0509.github.io/)<sup>1</sup>, [Ming-Yu Liu](http://mingyuliu.net/)<sup>1</sup>, [Jun-Yan Zhu](http://people.eecs.berkeley.edu/~junyanz/)<sup>2</sup>, Andrew Tao<sup>1</sup>, [Jan Kautz](http://jankautz.com/)<sup>1</sup>, [Bryan Catanzaro](http://catanzaro.name/)<sup>1</sup>  
- <sup>1</sup>NVIDIA Corporation, <sup>2</sup>UC Berkeley  
- In CVPR 2018.  
+ [Yajing Zhang]<sup>1</sup>, [Xiangyu Xiong](http://mingyuliu.net/)<sup>1</sup>, [Yaou Zhu]<sup>2</sup>
+ <sup>1</sup>MR Clinical Science, Philips Healthcare, Suzhou, China, <sup>2</sup> Department of Radiology, Beijing Tiantan Hospital, Capital Medical University, Beijing, China
 
-## Image-to-image translation at 2k/1k resolution
+## Image-to-image translation at 512x512 resolution
 - Our label-to-streetview results
 <p align='center'>  
   <img src='imgs/teaser_label.png' width='400'/>
