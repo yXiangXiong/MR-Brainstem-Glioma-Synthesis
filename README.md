@@ -88,7 +88,7 @@ Note: this is not tested and we trained our model using single GPU only. Please 
 - Flags: see `options/train_options.py` and `options/base_options.py` for all the training flags; see `options/test_options.py` and `options/base_options.py` for all the test flags.
 - Instance map: we take in both label maps and instance maps as input. If you don't want to use instance maps, please specify the flag `--no_instance`.
 - models: see 'pix2pixHD_model.py ' to modify the loss functions
-- models: see 'networks.py ' to modify the global generator framework
+- models: see 'networks.py ' to modify the global generator and discriminator
 - options: change the arguments
 
 
