@@ -1,4 +1,4 @@
-# pix2pixHD_Multi-task generative learning
+# Pix2pixHD Multi-task Generative Learning
 To reduce the exposure of Gadolinium-based Contrast Agents (GBCAs) in brainstem glioma detection and provide high-resolution contrast information,
 we propose a novel multi-task generative network for contrast-enhanced T1-weight MR synthesis on brainstem glioma images. The proposed network
 can simultaneously synthesize the high-resolution contrast-enhanced image and the segmentation mask of brainstem glioma lesions. <br><br>
@@ -14,6 +14,7 @@ segmentation: application to brainstem glioma
 - Our label-to-streetview results
 <p align='center'>  
   <img src='imgs/teaser_label.png' width='400'/>
+  <img src='imgs/teaser_ours.jpg' width='400'/>
   <img src='imgs/teaser_ours.jpg' width='400'/>
 </p>
 - Interactive editing results
