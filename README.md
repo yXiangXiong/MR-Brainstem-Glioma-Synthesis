@@ -42,7 +42,7 @@ pip install dominate
 ```
 - Clone this repo:
 ```bash
-git clone https://github.com/yXiangXiong/pix2pixHD_Multi-task_Learning
+git clone https://github.com/yXiangXiong/Multi-task_Generative_Synthesis_Network
 cd pix2pixHD_Multi-task_Learning
 ```
 
