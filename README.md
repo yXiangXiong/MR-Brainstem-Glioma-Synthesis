@@ -2,9 +2,11 @@
 To reduce the exposure of Gadolinium-based Contrast Agents (GBCAs) in brainstem glioma detection and provide high-resolution contrast information,
 we propose a novel multi-task generative network for contrast-enhanced T1-weight MR synthesis on brainstem glioma images. The proposed network
 can simultaneously synthesize the high-resolution contrast-enhanced image and the segmentation mask of brainstem glioma lesions. <br><br>
-[A multi-task generative network for simultaneous post-contrast MR image synthesis and tumor
-segmentation: application to brainstem glioma] 
- [Yajing Zhang]<sup>1</sup>, [Xiangyu Xiong]<sup>1</sup>, [Yaou Zhu]<sup>2</sup>
+
+A multi-task generative network for simultaneous post-contrast MR image synthesis and tumor
+segmentation: application to brainstem glioma
+
+[Yajing Zhang]<sup>1</sup>, [Xiangyu Xiong]<sup>1</sup>, [Yaou Zhu]<sup>2</sup>
  
 <sup>1</sup>MR Clinical Science, Philips Healthcare, Suzhou, China, <sup>2</sup> Department of Radiology, Beijing Tiantan Hospital, Capital Medical University, Beijing, China
 
