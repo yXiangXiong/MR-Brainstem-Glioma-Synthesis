@@ -74,15 +74,6 @@ python train.py --name label2city_512p --batchSize 8 --gpu_ids 0,1,2,3,4,5,6,7
 ```
 Note: this is not tested and we trained our model using single GPU only. Please use at your own discretion.
 
-### Training with Automatic Mixed Precision (AMP) for faster speed
-- To train with mixed precision support, please first install apex from: https://github.com/NVIDIA/apex
-- You can then train the model by adding `--fp16`. For example,
-```bash
-#!./scripts/train_512p_fp16.sh
-python -m torch.distributed.launch train.py --name label2city_512p --fp16
-```
-In our test case, it trains about 80% faster with AMP on a Volta machine.
-
 ### Training at full resolution
 - To train the images at full resolution (2048 x 1024) requires a GPU with 24G memory (`bash ./scripts/train_1024p_24G.sh`), or 16G memory if using mixed precision (AMP).
 - If only GPUs with 12G memory are available, please use the 12G script (`bash ./scripts/train_1024p_12G.sh`), which will crop the images during training. Performance is not guaranteed using this script.
@@ -92,18 +83,6 @@ In our test case, it trains about 80% faster with AMP on a Volta machine.
 - If your input is not a label map, please just specify `--label_nc 0` which will directly use the RGB colors as input. The folders should then be named `train_A`, `train_B` instead of `train_label`, `train_img`, where the goal is to translate images from A to B.
 - If you don't have instance maps or don't want to use them, please specify `--no_instance`.
 - The default setting for preprocessing is `scale_width`, which will scale the width of all training images to `opt.loadSize` (1024) while keeping the aspect ratio. If you want a different setting, please change it by using the `--resize_or_crop` option. For example, `scale_width_and_crop` first resizes the image to have width `opt.loadSize` and then does random cropping of size `(opt.fineSize, opt.fineSize)`. `crop` skips the resizing step and only performs random cropping. If you don't want any preprocessing, please specify `none`, which will do nothing other than making sure the image is divisible by 32.
-- Path Structure
-- F:\xiongxiangyu\pix2pixHD_Mask_Data
-----trainT1
-----trainT2
-----trainASL
-----trainCplus # T1 contrast enhanced image
-----trainMask
-----testT1
-----testT2
-----testASL
-----testCplus # T1 contrast enhanced image
-----testMask
 
 ## More Training/Test Details
 - Flags: see `options/train_options.py` and `options/base_options.py` for all the training flags; see `options/test_options.py` and `options/base_options.py` for all the test flags.
